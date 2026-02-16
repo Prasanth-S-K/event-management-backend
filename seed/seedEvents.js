@@ -1,4 +1,4 @@
-// server/seed/seedEvents.js
+// root\server\seed\seedEvents.js
 
 const dotenv = require("dotenv");
 const bcrypt = require("bcryptjs");

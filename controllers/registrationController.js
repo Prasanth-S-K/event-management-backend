@@ -1,4 +1,4 @@
-// controllers/registrationController.js
+// root\server\controllers\registrationController.js
 
 const mongoose = require("mongoose");
 const Registration = require("../models/Registration");

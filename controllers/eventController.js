@@ -1,4 +1,4 @@
-// server/controllers/eventController.js
+// root\server\controllers\eventController.js
 
 const Event = require("../models/Event");
 const getEvents = async (req, res) => {

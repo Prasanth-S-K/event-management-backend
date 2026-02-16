@@ -1,4 +1,4 @@
-// models/Event.js
+// root\server\models\Event.js
 
 const mongoose = require("mongoose");
 

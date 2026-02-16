@@ -1,4 +1,4 @@
-// const mongoose = require("mongoose");
+// root\server\models\Registration.js
 
 const mongoose = require("mongoose");
 

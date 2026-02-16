@@ -1,4 +1,4 @@
-// server/routes/eventRoutes.js
+// root\server\routes\eventRoutes.js
 
 const express = require("express");
 const {
