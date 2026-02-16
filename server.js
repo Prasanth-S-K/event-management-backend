@@ -13,33 +13,18 @@ dotenv.config();
 connectDB();
 
 const app = express();
-
 const PORT = process.env.PORT || 5000;
-
-const allowedOrigins = [
-  "http://localhost:5173",
-  "http://localhost:3000",
-  "https://event-management-frontend-zeta-nine.vercel.app",
-];
 
 app.use(
   cors({
-    origin: function (origin, callback) {
-      if (!origin) return callback(null, true);
-
-      if (allowedOrigins.indexOf(origin) === -1) {
-        console.log("Origin rejected:", origin);
-        return callback(new Error("CORS not allowed"), false);
-      }
-      return callback(null, true);
-    },
+    origin: true,
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
   }),
 );
 
-app.options("*", cors());
+app.options("*", cors({ origin: true, credentials: true }));
 
 app.use(express.json());
 
