@@ -16,6 +16,7 @@ connectDB();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+// CORS middleware
 app.use(
   cors({
     origin: true,
@@ -24,8 +25,6 @@ app.use(
     allowedHeaders: ["Content-Type", "Authorization"],
   }),
 );
-
-app.options("*", cors({ origin: true, credentials: true }));
 
 app.use(express.json());
 
